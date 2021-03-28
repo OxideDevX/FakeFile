@@ -1,11 +1,11 @@
 import sys
 
-Ver = 'v1.1'
+Ver = 'v1.2'
 
 def usage():
 
     print()
-    print('FakeFile ' + Ver + ' by MasterDevX')
+    print('FakeFile ' + Ver + ' by MasterDevX/OxideDevX(add function generate terabytes file)')
     print()
     print('Usage:')
     print('FakeFile.py FileName FileSize SizeUnit')
@@ -17,7 +17,7 @@ def usage():
     print('           Examples: 4, 128, 4000, 8192...')
     print()
     print('SizeUnit - Unit, in which file size is specified:')
-    print('           B - Bytes, K - Kilobytes, M - Megabytes, G - Gigabytes.')
+    print('           B - Bytes, K - Kilobytes, M - Megabytes, G - Gigabytes, T- Terabytes')
     print()
     sys.exit()
 
@@ -47,6 +47,10 @@ elif SizeUnit == 'M':
 elif SizeUnit == 'G':
 
     FileSize = round(float(FileSize * (1024 ** 3)))
+    
+elif SizeUnit == 'T':
+
+    FileSize = round(float(FileSize * (1024 ** 4)))
 
 else:
 
@@ -54,7 +58,7 @@ else:
 
 print('[FakeFile] Generating ' + FileName + ', ' + str(FileSize) + ' bytes...')
 File.write(b'\0' * FileSize)
-print('[FakeFile] File created!')
+print('[FakeFile] File succerful created!')
 
 File.close()
 sys.exit()
