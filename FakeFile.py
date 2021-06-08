@@ -1,6 +1,6 @@
 import sys
 
-Ver = 'v1.2'
+Ver = 'v1.2.0'
 
 def usage():
 
@@ -58,7 +58,7 @@ else:
 
 print('[FakeFile] Generating ' + FileName + ', ' + str(FileSize) + ' bytes...')
 File.write(b'\0' * FileSize)
-print('[FakeFile] File succerful created!')
+print('[FakeFile] File succerful created! Thank You!')
 
 File.close()
 sys.exit()
