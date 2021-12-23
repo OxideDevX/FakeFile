@@ -1,6 +1,5 @@
 import sys
-
-Ver = 'v1.2.0'
+Ver = 'v1.0.3.'
 
 def usage():
 
@@ -58,7 +57,7 @@ else:
 
 print('[FakeFile] Generating ' + FileName + ', ' + str(FileSize) + ' bytes...')
 File.write(b'\0' * FileSize)
-print('[FakeFile] File succerful created! Thank You!')
+print('[FakeFile] File succerful created! Thank You! It is script created by OxideDevX and MasterDevX.')
 
 File.close()
 sys.exit()
